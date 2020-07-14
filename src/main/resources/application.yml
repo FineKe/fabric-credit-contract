@@ -1,0 +1,23 @@
+server:
+  servlet:
+    context-path: /
+spring:
+  fabric:
+    chaincode:
+      identify: credit
+      name: chaincode
+      version: 1.0
+    channel: mychannel
+    peers: 2
+    organizations:
+      - Org1
+      - Org2
+    name: Common Fabric Network
+    gateway:
+      commit-timeout: 30
+      wallet:
+        identity: admin
+    network:
+      file: network/connection-Org1.yml
+      name: example-fabric
+    # Fabric explorer
